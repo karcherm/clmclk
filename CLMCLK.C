@@ -56,7 +56,7 @@ void ensure_cirrus(void)
 
 	// read cirrus chip ID register
 	disable();
-	outport(0x3c5, 0x1206);
+	outport(0x3c4, 0x1206);
 	crtcbase = (inportb(0x3cc) & 1) ? 0x3d4 : 0x3b4;
 	outportb(crtcbase, 0x27);
 	readback1 = inportb(crtcbase+1);
