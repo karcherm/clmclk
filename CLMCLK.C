@@ -101,5 +101,6 @@ int main(int argc, char* argv[])
 	}
 	freq = to_1e4hz(val);
 	printf("Current MCLK: %d.%02d MHz\n", freq / 100, freq % 100);
+	lock_cirrus();
 	return 0;
 }
